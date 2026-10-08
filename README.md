@@ -1,59 +1,61 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# 💊 Tas Obat
 
-## About Laravel
+**Jadwal minum obat yang dibuka cukup dengan sekali scan barcode**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Dibuat untuk membantu pasien dari segala usia — termasuk lansia — mengingat obat apa, dosis berapa, dan jam berapa harus diminum, tanpa perlu membuka aplikasi atau mengingat jadwal rumit.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+[![PHP](https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=php&logoColor=white)](https://www.php.net/)
+[![Laravel](https://img.shields.io/badge/Laravel-11-FF2D20?style=flat&logo=laravel&logoColor=white)](https://laravel.com/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+[Live Demo](https://tasobat.freedev.app/tas/demo) 
 
-## Learning Laravel
+</div>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 📖 Latar Belakang
 
-## Laravel Sponsors
+Pasien dengan banyak obat — terutama lansia dengan penyakit kronis seperti diabetes, hipertensi, atau kolesterol — sering kesulitan mengingat kombinasi dosis dan jadwal minum obat yang kompleks. **Tas Obat** menjawab masalah ini dengan pendekatan yang sangat sederhana: tempel satu barcode di tas obat, dan siapa pun yang memindainya langsung melihat jadwal lengkap tanpa instalasi apa pun.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ✨ Fitur
 
-### Premium Partners
+- 🪪 **Halaman personal** — menyapa sesuai nama, usia, dan jam saat halaman dibuka (pagi/siang/sore/malam)
+- 💊 **Kartu obat lengkap** — nama, dosis, frekuensi per hari, aturan minum, dan penjelasan fungsi obat dalam bahasa sederhana
+- ✅ **Centang jadwal interaktif** — tombol per waktu minum (pagi/siang/sore/malam) dengan progres visual real-time
+- 🔔 **Pengingat waktu aktif** — banner otomatis menyorot dosis yang harus diminum sesuai jam saat ini
+- 🎉 **Animasi perayaan** — efek confetti saat semua dosis hari itu selesai dicentang
+- 🔠 **Aksesibilitas** — pengaturan ukuran teks (3 tingkat) untuk kenyamanan pengguna lanjut usia
+- 📱 **Barcode siap cetak** — generate & unduh QR code langsung dari browser, tanpa dependensi eksternal
+- 🗄️ **Tanpa database** — seluruh data obat dikonfigurasi lewat satu file PHP, mudah di-deploy ke hosting mana pun
+- ♿ **Mobile-first & reduced-motion aware** — responsif di semua ukuran layar, animasi otomatis nonaktif jika perangkat diatur hemat gerakan
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🖼️ Pratinjau
 
-## Contributing
+| Halaman Utama | Barcode |
+|:---:|:---:|
+| ![Halaman jadwal obat](docs/screenshot-home.png) | ![Halaman QR code](docs/screenshot-qr.png) |
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+> *Ganti gambar di atas dengan screenshot Anda sendiri sebelum di-push ke GitHub.*
 
-## Code of Conduct
+## 🛠️ Tech Stack
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **Backend:** PHP 8.2, Laravel 11
+- **Frontend:** Blade Templates, vanilla JavaScript, CSS murni (tanpa framework CSS)
+- **Font:** Atkinson Hyperlegible (keterbacaan tinggi) & Bricolage Grotesque
+- **QR Generator:** qrcodejs (client-side, tanpa API eksternal)
+- **Penyimpanan progres:** localStorage browser (reset otomatis tiap hari)
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📂 Struktur Proyek
+tas-obat/
+├── app/Http/Controllers/
+│ └── TasObatController.php # Logika jadwal & pengelompokan waktu minum
+├── config/
+│ └── tas.php # Data obat & profil pemilik tas (edit di sini)
+├── resources/views/
+│ ├── tas.blade.php # Halaman jadwal obat
+│ └── qr.blade.php # Halaman cetak/unduh barcode
+└── routes/
+└── web.php
